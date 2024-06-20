@@ -1,0 +1,484 @@
+Time : 18:35:50
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : SELECT * FROM kullanicilar WHERE mail = :mail and sifre = :password
+
+Time : 17:51:55
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dersprogram`.`dersler`, CONSTRAINT `dersler_ibfk_2` FOREIGN KEY (`kullaniciId`) REFERENCES `kullanicilar` (`id`))
+Raw SQL : DELETE FROM kullanicilar WHERE id = :userId
+
+Time : 17:30:28
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dersprogram`.`dersler`, CONSTRAINT `dersler_ibfk_2` FOREIGN KEY (`kullaniciId`) REFERENCES `kullanicilar` (`id`))
+Raw SQL : DELETE FROM kullanicilar WHERE id = :userId
+
+Time : 17:05:51
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'wee@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 17:02:56
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dersprogram`.`dersler`, CONSTRAINT `dersler_ibfk_2` FOREIGN KEY (`kullaniciId`) REFERENCES `kullanicilar` (`id`))
+Raw SQL : DELETE FROM kullanicilar WHERE id = :userId
+
+Time : 17:02:50
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dersprogram`.`dersler`, CONSTRAINT `dersler_ibfk_2` FOREIGN KEY (`kullaniciId`) REFERENCES `kullanicilar` (`id`))
+Raw SQL : DELETE FROM kullanicilar WHERE id = :userId
+
+Time : 16:38:23
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1234@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 16:38:13
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 16:38:13
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 16:38:05
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 16:38:05
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 16:23:03
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dersprogram`.`dersler`, CONSTRAINT `dersler_ibfk_2` FOREIGN KEY (`kullaniciId`) REFERENCES `kullanicilar` (`id`))
+Raw SQL : DELETE FROM kullanicilar WHERE id = :userId
+
+Time : 16:13:01
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dersprogram`.`dersler`, CONSTRAINT `dersler_ibfk_2` FOREIGN KEY (`kullaniciId`) REFERENCES `kullanicilar` (`id`))
+Raw SQL : DELETE FROM kullanicilar WHERE id = :userId
+
+Time : 16:12:54
+SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dersprogram`.`dersler`, CONSTRAINT `dersler_ibfk_2` FOREIGN KEY (`kullaniciId`) REFERENCES `kullanicilar` (`id`))
+Raw SQL : DELETE FROM kullanicilar WHERE id = :userId
+
+Time : 16:00:39
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:55:46
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:54:58
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:54:11
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:53:42
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:53:35
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:52:06
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:51:37
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:50:37
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:50:11
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:49:41
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:48:41
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:47:28
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:46:57
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:45:58
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:45:48
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:43:47
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:43:25
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:43:17
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:42:53
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:41:07
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:38:38
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:37:15
+SQLSTATE[HY000]: General error: 2031 No data supplied for parameters in prepared statement
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:32:19
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:31:27
+SQLSTATE[HY000]: General error: 2031 No data supplied for parameters in prepared statement
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:22:14
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:20:31
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:19:25
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 15:19:01
+SQLSTATE[HY093]: Invalid parameter number
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:18:25
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123@gmail.com' for key 'mail'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:18:01
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:17:13
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:16:36
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:16:09
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:15:49
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:15:32
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:15:16
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:13:23
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:13:07
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:12:10
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:11:49
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:10:24
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:08:45
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, :olusturmaTarihi)
+
+Time : 15:00:18
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com, wqe, qew, qwe, 1, 1, 1, NOW())' at line 2
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (123@gmail.com, wqe, qew, qwe, 1, 1, 1, NOW())
+
+Time : 14:57:19
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:54:18
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com, 123, 123, 123, 1, 1, 1, NOW())' at line 2
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (123@gmail.com, 123, 123, 123, 1, 1, 1, NOW())
+
+Time : 14:53:42
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, 1, 1, 1, NOW())
+
+Time : 14:52:49
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, 1, 1, 1, NOW())
+
+Time : 14:51:35
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:48:33
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:46:18
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:45:06
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com, 234, 234, 234, 1, 1, 1, NOW())' at line 2
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (123@gmail.com, 234, 234, 234, 1, 1, 1, NOW())
+
+Time : 14:41:40
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:39:36
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:39:05
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:36:31
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:35:56
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:34:09
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:33:23
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:33:01
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:32:38
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:27:56
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:25:12
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:24:11
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:23:16
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+              VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:21:22
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+                  VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:21:00
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, name, surname, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+                  VALUES (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:19:27
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'password' in 'field list'
+Raw SQL : INSERT INTO kullanicilar (mail, password, name, surname, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+                  VALUES (:mail, :password, :name, :surname, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:18:58
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dersprogram.users' doesn't exist
+Raw SQL : INSERT INTO users (mail, password, name, surname, bolumId, unvanId, yetkiId, olusturmaTarihi)  
+                  VALUES (:mail, :password, :name, :surname, :bolumId, :unvanId, :yetkiId, NOW())
+
+Time : 14:12:18
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:10:05
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:09:25
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:08:58
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:08:37
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:08:16
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:06:03
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:59
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:41
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:40
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:38
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:37
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:06
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:00
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:05:00
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:03:29
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 14:03:28
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 13:59:20
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 13:57:02
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 13:57:00
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 13:56:33
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 13:55:48
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 13:55:35
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 13:55:26
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Time : 12:25:45
+SQLSTATE[HY000] [1049] Unknown database 'dersprogram'
+
+Time : 12:25:21
+SQLSTATE[HY000] [2002] Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı

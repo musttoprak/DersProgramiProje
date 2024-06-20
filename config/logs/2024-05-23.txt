@@ -1,0 +1,2 @@
+Time : 10:13:07
+SQLSTATE[HY000] [1049] Unknown database 'dersprogram'

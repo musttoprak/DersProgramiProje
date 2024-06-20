@@ -1,0 +1,5 @@
+Time : 12:25:45
+SQLSTATE[HY000] [1049] Unknown database 'dersprogram'
+
+Time : 12:25:21
+SQLSTATE[HY000] [2002] Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı

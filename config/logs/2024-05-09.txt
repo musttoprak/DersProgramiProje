@@ -1,0 +1,6 @@
+Time : 14:21:33
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unvanId, yetkiId) values (?, ?, ?, ?, ?, ?, ?)' at line 1
+Raw SQL : INSERT INTO kullanicilar (mail, sifre, ad, soyad, bolumId unvanId, yetkiId) values (:mail, :sifre, :ad, :soyad, :bolumId, :unvanId, :yetkiId)
+
+Time : 12:22:54
+SQLSTATE[HY000] [1049] Unknown database 'dersprogram'

@@ -1,0 +1,24 @@
+Time : 12:59:24
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'unvanId.id' in 'on clause'
+Raw SQL : select k.*, u.unvanAd, b.bolumAd, bi.birimAd, y.yetkiAd from kullanicilar k 
+        inner join unvanlar u on k.unvanId=unvanId.id 
+        inner join bolumler b on b.bolumId=k.bolumId 
+        inner join birimler bi on b.birimId=bi.birimId 
+        inner join yetkiler y on y.yetkiId=k.yetkiId
+
+Time : 12:52:22
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'bi.birimAdi' in 'field list'
+Raw SQL : select k.*, u.ad as unvan, b.bolumAd, bi.birimAdi from kullanicilar k 
+        inner join unvanlar u on k.unvanId=u.id 
+        inner join bolumler b on b.bolumId=k.bolumId 
+        inner join birimler bi on b.birimId=bi.birimId
+
+Time : 12:52:20
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'bi.birimAdi' in 'field list'
+Raw SQL : select k.*, u.ad as unvan, b.bolumAd, bi.birimAdi from kullanicilar k 
+        inner join unvanlar u on k.unvanId=u.id 
+        inner join bolumler b on b.bolumId=k.bolumId 
+        inner join birimler bi on b.birimId=bi.birimId
+
+Time : 10:55:37
+SQLSTATE[HY000] [1049] Unknown database 'dersprogram'

@@ -5,21 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="751de944-4f85-48b6-854c-952ccaf4e522" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DersProgrami/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DersProgrami/app/Http/Controllers/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DersProgrami/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DersProgrami/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DersProgramiProje.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.php" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/DersProgrami/public/js/birimler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DersProgrami/public/js/bolumler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DersProgrami/public/js/dersler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DersProgrami/public/js/siniflar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DersProgrami/resources/views/home/dersProgramiOlustur.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/app/Models/Birim.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Models/Birim.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/app/Models/Bolum.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Models/Bolum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/app/Models/Ders.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Models/Ders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/app/Models/DersProgrami.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Models/DersProgrami.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/app/Models/Kullanici.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Models/Kullanici.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/app/Models/Sinif.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Models/Sinif.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/js/kullanicilar.js" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/public/js/kullanicilar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/admin/birimler.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/resources/views/admin/birimler.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/admin/bolumler.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/resources/views/admin/bolumler.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/admin/dersler.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/resources/views/admin/dersler.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/admin/kullanicilar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/resources/views/admin/kullanicilar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/admin/siniflar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/resources/views/admin/siniflar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/baskan/dersProgramiOlustur.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/app/Http/Controllers/BirimController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/home/dersProgramiGoruntule.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/resources/views/home/dersProgramiGoruntule.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DersProgrami/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/DersProgrami/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,11 +206,11 @@
       <recent name="C:\Projelerim\DersProgramiProje\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projelerim\DersProgramiProje\DersProgrami\resources\views\home" />
+      <recent name="C:\Projelerim\DersProgramiProje\DersProgrami\public\js" />
       <recent name="C:\Projelerim\DersProgramiProje\DersProgrami\resources\tema" />
       <recent name="C:\Projelerim\DersProgramiProje\DersProgrami\resources\js" />
       <recent name="C:\Projelerim\DersProgramiProje\DersProgrami\resources\css" />
-      <recent name="C:\Projelerim\DersProgramiProje\DersProgrami\resources" />
-      <recent name="C:\Projelerim\DersProgramiProje\DersProgrami\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -238,7 +250,9 @@
       <option name="presentableId" value="Default" />
       <updated>1718879731804</updated>
       <workItem from="1718879732839" duration="22999000" />
-      <workItem from="1718903337915" duration="7966000" />
+      <workItem from="1718903337915" duration="8373000" />
+      <workItem from="1718961858777" duration="18752000" />
+      <workItem from="1718988978691" duration="2359000" />
     </task>
     <servers />
   </component>

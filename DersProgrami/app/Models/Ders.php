@@ -10,9 +10,9 @@ class Ders extends Model
     use HasFactory;
 
     protected $table = 'dersler'; // Veritabanı tablo adı
-
+    protected $primaryKey = 'dersId';
     protected $fillable = [
-        'bolumId', 'kullaniciId', 'dersKodu', 'dersAdi', 'dersSaati'
+        'bolumId', 'dersKodu', 'dersAdi', 'dersSaati'
     ];
 
     public $timestamps = false;
@@ -21,11 +21,5 @@ class Ders extends Model
     public function bolum()
     {
         return $this->belongsTo(Bolum::class, 'bolumId');
-    }
-
-    // Kullanıcı ilişkisi (Bir ders bir kullanıcıya ait olabilir)
-    public function kullanici()
-    {
-        return $this->belongsTo(Kullanici::class, 'kullaniciId');
     }
 }

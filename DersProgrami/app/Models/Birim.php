@@ -9,17 +9,13 @@ class Birim extends Model
 {
     use HasFactory;
 
-    protected $table = 'birimler'; // Birimler tablo adı
+    protected $table = 'birimler';
+    protected $primaryKey = 'birimId';
 
     protected $fillable = [
-        'birimAd', 'birimId', 'birimKodu'
+        'birimKodu', 'birimAd'
     ];
 
     public $timestamps = false;
 
-    // Bölümler ilişkisi (Bir birimde birden fazla bölüm olabilir)
-    public function bolumler()
-    {
-        return $this->hasMany(Bolum::class, 'birimId');
-    }
 }

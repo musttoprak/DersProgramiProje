@@ -9,7 +9,8 @@ class Sinif extends Model
 {
     use HasFactory;
 
-    protected $table = 'siniflar'; // Veritabanı tablo adı
+    protected $table = 'sinif'; // Veritabanı tablo adı
+    protected $primaryKey = 'sinifId';
 
     protected $fillable = [
         'sinifAd', 'kapasite'

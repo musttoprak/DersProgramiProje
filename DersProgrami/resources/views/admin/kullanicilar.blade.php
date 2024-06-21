@@ -5,7 +5,9 @@
 @section('content')
     <div class="container mt-5">
         <h2>Kullanıcılar</h2>
-        <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addUserModal" data-action="add">Kullanıcı Ekle</button>
+        <button type="button" class="btn btn-primary mb-3" data-toggle="modal" id="addUserModalBtn" data-action="add">
+            Kullanıcı Ekle
+        </button>
         <table class="table">
             <thead>
             <tr>
@@ -28,8 +30,11 @@
                     <td>{{ $kullanici->unvanId }}</td>
                     <td>{{ $kullanici->yetkiId }}</td>
                     <td>
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editUserModal" data-action="edit" data-id="{{ $kullanici->id }}">Düzenle</button>
-                        <button type="button" class="btn btn-sm btn-danger">Sil</button>
+                        <button type="button" class="btn btn-sm btn-primary editUserModalBtn" data-toggle="modal"
+                                data-action="edit" data-id="{{ $kullanici->id }}">Düzenle
+                        </button>
+                        <button type="button" class="btn btn-sm btn-danger deleteUserBtn" data-id="{{ $kullanici->id }}">Sil</button>
+
                     </td>
                 </tr>
             @endforeach
@@ -38,7 +43,8 @@
     </div>
 
     <!-- Modal - Kullanıcı Düzenleme -->
-    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -87,7 +93,8 @@
     </div>
 
     <!-- Modal - Kullanıcı Ekleme -->
-    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+    <div id="addUserModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -97,7 +104,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="kullaniciForm">
+                    <form action="/admin/kullanicilar/ekle" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="mail">E-posta Adresi</label>
@@ -133,9 +140,6 @@
             </div>
         </div>
     </div>
-
-@endsection
-
-@section('scripts')
     <script src="{{ asset('js/kullanicilar.js') }}"></script>
 @endsection
+

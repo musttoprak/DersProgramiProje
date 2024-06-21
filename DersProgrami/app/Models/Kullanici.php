@@ -12,10 +12,10 @@ class Kullanici extends Model
     protected $table = 'kullanicilar'; // Veritabanı tablo adı
 
     protected $fillable = [
-        'ad', 'soyad', 'mail', 'sifre', 'bolumId', 'unvanId', 'yetkiId'
+        'ad', 'soyad', 'mail', 'sifre', 'bolumId', 'unvanId', 'yetkiId', 'olusturmaTarihi'
     ];
 
-    public $timestamps = true;
+    public $timestamps = false;
 
     // Bölüm ilişkisi (Kullanıcı bir bölüme ait olabilir)
     public function bolum()

@@ -1,103 +1,98 @@
+@extends('layouts.app')
 
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-birim-ekle">
-    Birim Ekle
-</button>
-<br/>
-<br/>
-<table id="myTable" class="display">
-    <thead>
-        <tr>
-            <td>Birim Id</td>
-            <td>Birim Kodu</td>
-            <td>Birim Adı</td>
-        </tr>
-    <thead>
-    <tbody>
-        <?php foreach (FONK->getBirimler() as $value) { ?>
+@section('title', 'Birimler')
+
+@section('content')
+    <div class="container mt-5">
+        <h2>Birimler</h2>
+        <button type="button" class="btn btn-primary mb-3" data-toggle="modal" id="addBirimModalBtn" data-action="add">
+            Birim Ekle
+        </button>
+        <table class="table">
+            <thead>
             <tr>
-                <td><?=$value["birimId"];?></td>
-                <td><?=$value["birimKodu"];?></td>
-                <td><?=$value["birimAd"];?></td>
-                <td>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default">İşlemler</button>
-                        <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                        <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu" role="menu">
-                        <button class="dropdown-item" onclick="birim_sil(<?=$value['birimId'];?>)">Sil</button>
-                        <button class="dropdown-item" onclick="birim_guncelle_ac(<?=$value['birimId'];?>, '<?=$value['birimKodu'];?>', '<?=$value['birimAd'];?>')">Güncelle</button>
-                        </div>
-                    </div>
-                </td>
+                <th>Birim Id</th>
+                <th>Birim Kodu</th>
+                <th>Birim Adı</th>
+                <th>İşlemler</th>
             </tr>
-        <?php } ?>
-    <tbody>
-</table>
+            </thead>
+            <tbody id="birimTableBody">
+            @foreach($birimler as $birim)
+                <tr>
+                    <td>{{ $birim->birimId }}</td>
+                    <td>{{ $birim->birimKodu }}</td>
+                    <td>{{ $birim->birimAd }}</td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-primary editBirimModalBtn" data-toggle="modal"
+                                data-action="edit" data-id="{{ $birim->birimId }}">Düzenle
+                        </button>
+                        <button type="button" class="btn btn-sm btn-danger deleteBirimBtn" data-id="{{ $birim->birimId }}">Sil</button>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
 
-<!-- Birim Ekle Modal Başlangıç -->
-<div class="modal fade" id="modal-birim-ekle">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title">Birim Ekle Formu</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="mb-3">        
-                <input type="text" class="form-control" id="birimKodu" placeholder="Birim Kodu giriniz..">
-            </div>
-            <div class="mb-3 row">
-                <div class="col">                  
-                    <input type="text" class="form-control" id="birimAd" placeholder="Birim Adı giriniz...">
+    <!-- Modal - Birim Düzenleme -->
+    <div class="modal fade" id="editBirimModal" tabindex="-1" role="dialog" aria-labelledby="editBirimModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBirimModalLabel">Birim Düzenle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                
+                <div class="modal-body">
+                    <form id="birimFormEdit">
+                        @csrf
+                        <div class="form-group">
+                            <label for="birimKoduEdit">Birim Kodu</label>
+                            <input type="text" class="form-control" id="birimKoduEdit" name="birimKoduEdit" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birimAdEdit">Birim Adı</label>
+                            <input type="text" class="form-control" id="birimAdEdit" name="birimAdEdit" required>
+                        </div>
+                        <input type="hidden" name="birimIdEdit" id="birimIdEdit">
+                        <button type="submit" class="btn btn-primary">Birim Düzenle</button>
+                    </form>
+                </div>
             </div>
-            </div>                  
-        </div>
-        <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-            <button onclick="birim_ekle()" type="submit" class="btn btn-success">Kaydet</button>
         </div>
     </div>
-    <!-- /.modal-content -->
-</div>
-<!-- /.modal-dialog -->
-</div>
-<!-- Kullanıcı Ekle Modal Son -->
 
-<!-- Kullanıcı Güncelle Modal Başlangıç -->
-<div class="modal fade" id="modal-birim-guncelle">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="modal-title">Birim Güncelleme Formu</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">            
-            <div class="mb-3">        
-                <input type="text" class="form-control" id="g_birimKodu" placeholder="Mail giriniz..">
-            </div>
-            <div class="mb-3 row">
-                <div class="col">                  
-                    <input type="password" class="form-control" id="g_birimAd" placeholder="Şifre giriniz...">
+    <!-- Modal - Birim Ekleme -->
+    <div id="addBirimModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addBirimModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBirimModalLabel">Birim Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-        </div>
-            </div>                  
-        </div>
-        <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-            <button id="btn_birim_guncelle" onclick="birim_guncelle()" type="submit" class="btn btn-success">                
-                Güncelle
-            </button>
+                <div class="modal-body">
+                    <form id="birimForm">
+                        @csrf
+                        <div class="form-group">
+                            <label for="birimKodu">Birim Kodu</label>
+                            <input type="text" class="form-control" id="birimKodu" name="birimKodu" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birimAd">Birim Adı</label>
+                            <input type="text" class="form-control" id="birimAd" name="birimAd" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Birim Ekle</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- /.modal-content -->
-</div>
-<!-- /.modal-dialog -->
-</div>
-<!-- Kullanıcı Güncelle Modal Son -->
+
+    <script src="{{ asset('js/birimler.js') }}"></script>
+@endsection

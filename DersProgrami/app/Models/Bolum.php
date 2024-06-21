@@ -10,9 +10,9 @@ class Bolum extends Model
     use HasFactory;
 
     protected $table = 'bolumler'; // Bölümler tablo adı
-
+    protected $primaryKey = 'bolumId';
     protected $fillable = [
-        'bolumAd','bolumId','bolumKodu','birimId'
+        'bolumAd','bolumKodu','birimId'
     ];
 
     public $timestamps = false;

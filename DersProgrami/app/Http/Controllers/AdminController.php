@@ -30,22 +30,66 @@ class AdminController extends Controller
 
     public function kullaniciGuncelle(Request $request, $id)
     {
+        // Form verilerini ayrı değişkenlere atayarak güncelleme yapma
+        $mail = $request['mailEdit'];
+        $sifre = $request['sifreEdit'];
+        $ad = $request['adEdit'];
+        $soyad = $request['soyadEdit'];
+        $bolumId = $request['bolumIdEdit'];
+        $unvanId = $request['unvanIdEdit'];
+        $yetkiId = $request['yetkiIdEdit'];
+
+        // Veritabanında güncelleme işlemi
         $kullanici = Kullanici::findOrFail($id);
-        $kullanici->update($request->all());
+        $kullanici->mail = $mail;
+        $kullanici->sifre = $sifre;
+        $kullanici->ad = $ad;
+        $kullanici->soyad = $soyad;
+        $kullanici->bolumId = $bolumId;
+        $kullanici->unvanId = $unvanId;
+        $kullanici->yetkiId = $yetkiId;
+        $kullanici->save();
+
+        // Güncellenen kullanıcıyı JSON formatında döndürme
         return response()->json($kullanici);
     }
+
 
     public function kullaniciDuzenleForm($id)
     {
         $kullanici = Kullanici::findOrFail($id);
-        return response()->json($kullanici);
+        $bolumler = Bolum::all();
+        $unvanlar = Unvan::all();
+        $yetkiler = Yetki::all();
+        return response()->json([
+            'kullanici' => $kullanici,
+            'bolumler' => $bolumler,
+            'unvanlar' => $unvanlar,
+            'yetkiler' => $yetkiler
+        ]);
     }
 
     public function kullaniciSil($id)
     {
         $kullanici = Kullanici::findOrFail($id);
         $kullanici->delete();
+
+        // Başarılı bir silme işlemi olduğunda JSON yanıtı döndürebilirsiniz:
         return response()->json(['success' => true]);
+
+        // Veya varsayılan olarak sayfa yenileme işlemi yapılabilir:
+        // return redirect()->route('admin.kullanici.listesi')->with('success', 'Kullanıcı başarıyla silindi.');
+    }
+
+    public function kullaniciEkleForm(){
+        $bolumler = Bolum::all();
+        $unvanlar = Unvan::all();
+        $yetkiler = Yetki::all();
+        return response()->json([
+            'bolumler' => $bolumler,
+            'unvanlar' => $unvanlar,
+            'yetkiler' => $yetkiler
+        ]);
     }
 
     public function bolumler()
@@ -64,5 +108,17 @@ class AdminController extends Controller
     {
         $yetkiler = Yetki::all();
         return response()->json($yetkiler);
+    }
+
+    public function getOptions()
+    {
+        $bolumler = Bolum::all();
+        $unvanlar = Unvan::all();
+        $yetkiler = Yetki::all();
+        return response()->json([
+            'bolumler' => $bolumler,
+            'unvanlar' => $unvanlar,
+            'yetkiler' => $yetkiler
+        ]);
     }
 }

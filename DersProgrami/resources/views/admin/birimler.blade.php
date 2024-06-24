@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Birimler')
+@section('titleParent', 'Admin')
 
 @section('content')
     <div class="container mt-5">
-        <h2>Birimler</h2>
-        <button type="button" class="btn btn-primary mb-3" data-toggle="modal" id="addBirimModalBtn" data-action="add">
+        <button type="button" class="btn btn-primary mb-3"  id="addBirimModalBtn" >
             Birim Ekle
         </button>
         <table class="table">
@@ -27,7 +27,9 @@
                         <button type="button" class="btn btn-sm btn-primary editBirimModalBtn" data-toggle="modal"
                                 data-action="edit" data-id="{{ $birim->birimId }}">Düzenle
                         </button>
-                        <button type="button" class="btn btn-sm btn-danger deleteBirimBtn" data-id="{{ $birim->birimId }}">Sil</button>
+                        <button type="button" class="btn btn-sm btn-danger deleteBirimBtn"
+                                data-id="{{ $birim->birimId }}">Sil
+                        </button>
                     </td>
                 </tr>
             @endforeach

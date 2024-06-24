@@ -11,11 +11,13 @@ $(document).ready(function () {
             data: formData,
             success: function(response) {
                 $('#addDersModal').modal('hide');
-                alert(response.success);
-                location.reload(); // Sayfayı yenile
+                toastr.success(response.success);
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
             },
             error: function(xhr) {
-                alert('Bir hata oluştu: ' + xhr.responseText);
+                toastr.warning('Bir hata oluştu: ' + xhr.responseText);
             }
         });
     });
@@ -32,11 +34,13 @@ $(document).ready(function () {
             data: formData,
             success: function(response) {
                 $('#editDersModal').modal('hide');
-                alert(response.success);
-                location.reload(); // Sayfayı yenile
+                toastr.success(response.success);
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
             },
             error: function(xhr) {
-                alert('Bir hata oluştu: ' + xhr.responseText);
+                toastr.warning('Bir hata oluştu: ' + xhr.responseText);
             }
         });
     });
@@ -50,11 +54,13 @@ $(document).ready(function () {
                 url: '/admin/dersler/' + dersId,
                 type: "GET",
                 success: function(response) {
-                    alert(response.success);
-                    location.reload(); // Sayfayı yenile
+                    toastr.success(response.success);
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
                 },
                 error: function(xhr) {
-                    alert('Bir hata oluştu: ' + xhr.responseText);
+                    toastr.warning('Bir hata oluştu: ' + xhr.responseText);
                 }
             });
         }
@@ -77,7 +83,7 @@ $(document).ready(function () {
                 $('#editDersModal').modal('show');
             },
             error: function(xhr) {
-                alert('Bir hata oluştu: ' + xhr.responseText);
+                toastr.warning('Bir hata oluştu: ' + xhr.responseText);
             }
         });
     });

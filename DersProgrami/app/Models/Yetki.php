@@ -10,9 +10,9 @@ class Yetki extends Model
     use HasFactory;
 
     protected $table = 'yetkiler'; // Yetkiler tablo adı
-
+    protected $primaryKey = 'yetkiId';
     protected $fillable = [
-        'yetkiId','yetkiAd'
+        'yetkiAd'
     ];
 
     public $timestamps = false;

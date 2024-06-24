@@ -15,13 +15,14 @@ $(document).ready(function() {
                 $('#editBirimModal').modal('show');
             },
             error: function(xhr, status, error) {
-                console.error(error);
+                toastr.warning(error);
                 // Handle error appropriately
             }
         });
     });
 
     $('#addBirimModalBtn').on('click', function() {
+        console.log("virim ekle utonu tıklnadı");
         $('#addBirimModal').modal('show');
     });
 
@@ -32,11 +33,14 @@ $(document).ready(function() {
                 url: '/admin/birimler/' + birimId,
                 type: 'GET',
                 success: function(response) {
+                    toastr.success("Başarılı bir şekilde silindi");
                     // Silme işlemi başarılı olduğunda sayfayı yeniden yükle
-                    location.reload();
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
                 },
                 error: function(xhr, textStatus, errorThrown) {
-                    console.log(xhr.responseText); // Hata durumunda konsola yazdır
+                    toastr.warning(xhr.responseText); // Hata durumunda konsola yazdır
                 }
             });
         }
@@ -52,11 +56,14 @@ $(document).ready(function() {
             type: 'POST',
             data: formData,
             success: function(response) {
+                toastr.success("Başarılı bir şekilde düzenlendi");
                 $('#editBirimModal').modal('hide');
-                location.reload();
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
             },
             error: function(xhr, textStatus, errorThrown) {
-                console.error(xhr.responseText);
+                toastr.warning(xhr.responseText);
             }
         });
     });
@@ -69,13 +76,16 @@ $(document).ready(function() {
             type: 'POST',
             data: formData,
             success: function(response) {
+                toastr.success("Başarılı bir şekilde eklendi");
                 // Başarılı bir şekilde eklendiğinde modalı kapat
                 $('#addBirimModal').modal('hide');
-                location.reload();
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
                 // Bu kısmı, örneğin listedeki veriyi yeniden yükleyerek veya yeni satır ekleyerek yapabilirsiniz
             },
             error: function(xhr, textStatus, errorThrown) {
-                console.error(xhr.responseText);
+                toastr.warning(xhr.responseText);
             }
         });
     });

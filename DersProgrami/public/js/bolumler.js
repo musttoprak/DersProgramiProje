@@ -9,11 +9,14 @@ $(document).ready(function () {
             type: "POST",
             data: formData,
             success: function(response) {
+                toastr.success("Başarılı bir şekilde eklendi");
                 $('#addBolumModal').modal('hide');
-                location.reload(); // Sayfayı yenile
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
             },
             error: function(xhr) {
-                console.log('Bir hata oluştu: ' + xhr.responseText);
+                toastr.warning('Bir hata oluştu: ' + xhr.responseText);
             }
         });
     });
@@ -28,11 +31,14 @@ $(document).ready(function () {
             type: "POST",
             data: formData,
             success: function(response) {
+                toastr.success("Başarılı bir şekilde düzenlendi");
                 $('#editBolumModal').modal('hide');
-                location.reload(); // Sayfayı yenile
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
             },
             error: function(xhr) {
-                alert('Bir hata oluştu: ' + xhr.responseText);
+                toastr.warning('Bir hata oluştu: ' + xhr.responseText);
             }
         });
     });
@@ -46,10 +52,13 @@ $(document).ready(function () {
                 url: '/admin/bolumler/' + bolumId,
                 type: "GET",
                 success: function(response) {
-                    location.reload(); // Sayfayı yenile
+                    toastr.success("Başarılı bir şekilde silindi");
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
                 },
                 error: function(xhr) {
-                    alert('Bir hata oluştu: ' + xhr.responseText);
+                    toastr.warning('Bir hata oluştu: ' + xhr.responseText);
                 }
             });
         }
@@ -74,8 +83,7 @@ $(document).ready(function () {
             },
             error: function(xhr, status, error) {
                 // Hata durumunda bildirim göster
-                console.log('Bir hata oluştu: ' + xhr.responseText);
-                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                toastr.warning('Bir hata oluştu. Lütfen tekrar deneyin.');
             }
         });
     });

@@ -10,9 +10,9 @@ class Unvan extends Model
     use HasFactory;
 
     protected $table = 'unvanlar'; // Ünvanlar tablo adı
-
+    protected $primaryKey = 'unvanId';
     protected $fillable = [
-        'unvanId','unvanAd'
+        'unvanAd'
     ];
 
     public $timestamps = false;

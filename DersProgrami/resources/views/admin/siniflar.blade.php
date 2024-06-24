@@ -1,8 +1,8 @@
 @extends('layouts.app')
-
+@section('title', 'Sınıflar')
+@section('titleParent', 'Admin')
 @section('content')
     <div class="container">
-        <h2>Sınıflar</h2>
         <button id="addSinifModalBtn" class="btn btn-primary mb-3">Yeni Sınıf Ekle</button>
         <table class="table">
             <thead>

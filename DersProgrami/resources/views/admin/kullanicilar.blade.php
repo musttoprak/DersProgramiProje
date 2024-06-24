@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Kullanıcılar')
-
+@section('titleParent', 'Admin')
 @section('content')
     <div class="container mt-5">
-        <h2>Kullanıcılar</h2>
         <button type="button" class="btn btn-primary mb-3" data-toggle="modal" id="addUserModalBtn" data-action="add">
             Kullanıcı Ekle
         </button>
@@ -26,9 +25,9 @@
                     <td>{{ $kullanici->mail }}</td>
                     <td>{{ $kullanici->ad }}</td>
                     <td>{{ $kullanici->soyad }}</td>
-                    <td>{{ $kullanici->bolumId }}</td>
-                    <td>{{ $kullanici->unvanId }}</td>
-                    <td>{{ $kullanici->yetkiId }}</td>
+                    <td>{{ $kullanici->bolum->bolumAd }}</td>
+                    <td>{{ $kullanici->unvan->unvanAd }}</td>
+                    <td>{{ $kullanici->yetki->yetkiAd }}</td>
                     <td>
                         <button type="button" class="btn btn-sm btn-primary editUserModalBtn" data-toggle="modal"
                                 data-action="edit" data-id="{{ $kullanici->id }}">Düzenle

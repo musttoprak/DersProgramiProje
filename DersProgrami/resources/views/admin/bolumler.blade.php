@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('title', 'Bölümler')
-
+@section('titleParent', 'Admin')
 @section('content')
     <div class="container mt-5">
-        <h2>Bölümler</h2>
         <button type="button" class="btn btn-primary mb-3" data-toggle="modal" id="addBolumModalBtn" data-action="add">
             Bölüm Ekle
         </button>

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Sınıf Ekleme
-    $('#sinifForm').submit(function(event) {
+    $('#sinifForm').submit(function (event) {
         event.preventDefault();
         var formData = $(this).serialize();
 
@@ -8,19 +8,21 @@ $(document).ready(function () {
             url: "/admin/siniflar",
             type: "POST",
             data: formData,
-            success: function(response) {
+            success: function (response) {
                 $('#addSinifModal').modal('hide');
-                alert(response.success);
-                location.reload(); // Sayfayı yenile
+                toastr.success(response.success);
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
             },
-            error: function(xhr) {
-                alert('Bir hata oluştu: ' + xhr.responseText);
+            error: function (xhr) {
+                toastr.warning('Bir hata oluştu: ' + xhr.responseText);
             }
         });
     });
 
     // Sınıf Düzenleme
-    $('#sinifFormEdit').submit(function(event) {
+    $('#sinifFormEdit').submit(function (event) {
         event.preventDefault();
         var formData = $(this).serialize();
         var sinifId = $('#sinifIdEdit').val();
@@ -29,51 +31,55 @@ $(document).ready(function () {
             url: '/admin/siniflar/' + sinifId,
             type: "POST",
             data: formData,
-            success: function(response) {
+            success: function (response) {
                 $('#editSinifModal').modal('hide');
-                alert(response.success);
-                location.reload(); // Sayfayı yenile
+                toastr.success(response.success);
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
             },
-            error: function(xhr) {
-                alert('Bir hata oluştu: ' + xhr.responseText);
+            error: function (xhr) {
+                toastr.warning('Bir hata oluştu: ' + xhr.responseText);
             }
         });
     });
 
     // Sınıf Silme
-    $('.deleteSinifBtn').click(function() {
+    $('.deleteSinifBtn').click(function () {
         var sinifId = $(this).data('id');
 
         if (confirm('Bu sınıfı silmek istediğinize emin misiniz?')) {
             $.ajax({
                 url: '/admin/siniflar/' + sinifId,
                 type: "GET",
-                success: function(response) {
-                    alert(response.success);
-                    location.reload(); // Sayfayı yenile
+                success: function (response) {
+                    toastr.success(response.success);
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
                 },
-                error: function(xhr) {
-                    alert('Bir hata oluştu: ' + xhr.responseText);
+                error: function (xhr) {
+                    toastr.warning('Bir hata oluştu: ' + xhr.responseText);
                 }
             });
         }
     });
 
     // Sınıf Düzenleme Modalı Açma
-    $('.editSinifModalBtn').click(function() {
+    $('.editSinifModalBtn').click(function () {
         var sinifId = $(this).data('id');
 
         // Sınıf bilgilerini modal üzerinde göster
         $.ajax({
             url: '/admin/siniflar/' + sinifId + '/edit',
             type: 'GET',
-            success: function(response) {
+            success: function (response) {
                 $('#sinifAdEdit').val(response.sinif.sinifAd);
                 $('#kapasiteEdit').val(response.sinif.kapasite);
                 $('#sinifIdEdit').val(sinifId);
                 $('#editSinifModal').modal('show');
             },
-            error: function(xhr) {
+            error: function (xhr) {
                 alert('Bir hata oluştu: ' + xhr.responseText);
             }
         });
@@ -81,7 +87,7 @@ $(document).ready(function () {
 
 
     // Sınıf Ekleme Modalı Açma
-    $('#addSinifModalBtn').click(function() {
+    $('#addSinifModalBtn').click(function () {
         $('#addSinifModal').modal('show');
     });
 });

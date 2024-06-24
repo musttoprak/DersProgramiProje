@@ -1,8 +1,8 @@
 @extends('layouts.app')
-
+@section('title', 'Dersler')
+@section('titleParent', 'Admin')
 @section('content')
     <div class="container">
-        <h2>Dersler</h2>
         <button id="addDersModalBtn" class="btn btn-primary mb-3">Yeni Ders Ekle</button>
         <table class="table">
             <thead>

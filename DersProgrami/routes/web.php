@@ -9,25 +9,27 @@ use App\Http\Controllers\SinifController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [HomeController::class, 'showDersProgramlari'])
-    ->name('home.dersProgramiGoruntule');
+Route::get('/', [HomeController::class, 'dersProgramiGoruntule'])->name('home.dersProgramiGoruntule');
+Route::get('/ders-programi-goster', [HomeController::class, 'dersProgramiGoster'])->name('home.dersProgramiGoster');
 
-Route::get('/ders-programlari', [HomeController::class, 'dersProgramlari'])
-    ->name('home.dersProgramlari');
 
 Route::get('/api/bolumler/{birimId}', [HomeController::class, 'getBolumlerByBirim']);
+Route::get('/api/siniflar', [HomeController::class, 'getSiniflar']);
+Route::get('/api/dersler/{bolumId}', [HomeController::class, 'getDerslerByBolum']);
+Route::get('/api/ogretimUyeleri', [HomeController::class, 'getOgretimUyeleri']);
 
 
-Route::get('home/dersProgramiOlustur', [HomeController::class, 'dersProgramiOlustur'])
+Route::get('/home/dersProgramiOlustur', [HomeController::class, 'dersProgramiOlustur'])
     ->name('home.dersProgramiOlustur');
 
-Route::post('home/dersProgramiOlustur', [HomeController::class, 'submitDersProgramiOlustur'])
+Route::post('/home/dersProgramiOlusturSubmit', [HomeController::class, 'submitDersProgramiOlustur'])
     ->name('home.dersProgramiOlustur.submit');
 
 
 Route::get('login', [LoginController::class, 'index'])->name('login'); // Giriş sayfası
 Route::post('login', [LoginController::class, 'postLogin'])->name('postLogin'); // Giriş işlemi
-Route::post('logout', [LoginController::class, 'logout'])->name('logout'); // Giriş işlemi
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
 
 Route::group(['prefix' => 'admin'], function () {
     // AdminController routes

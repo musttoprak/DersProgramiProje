@@ -14,8 +14,8 @@ PHP >= 7.4
 Composer
 Laravel
 MySQL
-Node.js & NPM
 Step-by-Step Guide
+
 Clone the repository:
 git clone [https://github.com/yourusername/lesson-schedule-system.git](https://github.com/musttoprak/Lesson-Schedule-System.git)
 cd DersProgrami
